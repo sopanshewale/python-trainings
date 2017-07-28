@@ -23,4 +23,12 @@ mean = sum /
 
 print mean
 
+# BMI  = bodyweight in kg / (height in meter) ^ 2
+bodyweight = 70 
+height = 1.75 
+bmi = ( ) / (  ) ( ) 
 
+if bmi < 18 : 
+    print ("Oh - welcome my friend. Congratulations, you have six packs") 
+else: 
+         print ("Hello - you need to worry about your fitness") 
