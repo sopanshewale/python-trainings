@@ -1,0 +1,2 @@
+conda install -c anaconda mysql-connector-python 
+
