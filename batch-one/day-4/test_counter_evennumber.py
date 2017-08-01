@@ -14,3 +14,8 @@ e = EvenNumber(2)
 print (next(e))
 print (next(e))
 print (next(e))
+
+i = iter(EvenNumber(10))
+
+print(type(i))
+
