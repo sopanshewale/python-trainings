@@ -8,8 +8,8 @@ with sqlite3.connect(db_filename) as conn:
 
     cursor.execute(""" select id, priority, details, status, deadline from task where project = 'assignments' """)
 
-    #for row in cursor.fetchall():
-    for row in cursor.fetchmany(2):
+    for row in cursor.fetchall():
+    #for row in cursor.fetchmany(2):
         task_id, priority, details, status, deadline = row
         print('{:2d} [{:d}] {:<25} [{:<8}] ({})'.format( task_id, priority, details, status, deadline))
 
