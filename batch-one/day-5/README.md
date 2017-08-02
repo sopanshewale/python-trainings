@@ -68,7 +68,6 @@ plt.show()
 # snippet 6
 
 ```
-```
 
 import numpy as np
 import matplotlib.pyplot as plt
