@@ -44,7 +44,6 @@ who('Arthur')
 # snippet 5
 
 ```
-```
 import re
 import numpy as np
 year = []
