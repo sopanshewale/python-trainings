@@ -1,0 +1,81 @@
+Q. 1 Create a script to generate dummy log files with following details: 
+
+directory: logs/
+filename format: 
+     ...
+     ...
+     access.log.3.gz, 
+     access.log.2.gz, 
+     access.log.1.gz, 
+     access.log,
+     
+
+File should contain lines like:
+
+-------
+
+10.0.2.2 - - [22/Aug/2016:10:45:38 +0000] "GET /login/?next=/ HTTP/1.1" 200 704 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36"
+10.0.2.2 - - [22/Aug/2016:10:45:38 +0000] "GET /static/admin/css/base.css HTTP/1.1" 404 208 "http://localhost:9090/login/?next=/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36"
+10.0.2.2 - - [22/Aug/2016:10:45:38 +0000] "GET /static/admin/css/login.css HTTP/1.1" 404 208 "http://localhost:9090/login/?next=/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36"
+10.0.2.2 - - [22/Aug/2016:10:45:47 +0000] "POST /login/ HTTP/1.1" 200 756 "http://localhost:9090/login/?next=/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36"
+10.0.2.2 - - [22/Aug/2016:10:45:47 +0000] "GET /static/admin/css/base.css HTTP/1.1" 404 208 "http://localhost:9090/login/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36"
+
+---------
+Make sure following is achieved:  
+
+0. Let us create log files for 1 month (August 2017)
+1. Each day file should be around 10MB in size
+2. IP address should be is random IP address (try to use Public IP addresses) 
+   Create randon 50 IP addresses. 
+3. Make sure date and time field and filename format matches. 
+4. Methods are: POST, GET
+5. pages URL's are: 
+    a. /login/?next=/
+    b. /static/admin/css/base.css
+    c. /blog
+    d. /about 
+    e. /sitemap 
+    f. /mycourse/python
+6. STATUS number: 
+    a. 200
+    b. 503
+    c. 404
+7. size of  the pages:  That's in kbytes. Let us make size of each page upto 2MB. 
+8. Browsers options are: 
+   a. Mozilla
+   b. Chrome
+   c. Windows IE
+   c. Safari
+
+
+
+Q 2. Process Above Log files using Pandas, Numpy. Try to answer Questions: 
+    a. Which Public IP is heavily used? 
+    b. which URL is highly used in size of data? 
+    c. Which URL was used maximum number of times? 
+    d. Which browser is favourite amoung users? 
+
+
+Q. 3  Analyse chinook.db sqlite database (SQLite3)
+
+
+Q 4  Develop "StockAnalysis.py" Python Module 
+   a. Fetches Stock Data from Yahoo API
+   b. It has caching mechanism - keeps data in local file once fetched. Keep expiry time to cache
+   c. use try/except to raise error if it fails to fetch data from Yahoo API. 
+      
+Q. 5. Download Excel data from NSE Stock Exchange (go for NSE Index or any stock like RIL) and analyse using Pandas 
+
+Q. 6  Bucketing Donations - use USA President Donation camp data
+      Fedral Election Commission Database
+
+Q. 7 McDonald Food Menu: https://www.kaggle.com/mcdonalds/nutrition-facts
+
+Q. 8 Indian Premier League - https://www.kaggle.com/harsha547/indian-premier-league-csv-dataset 
+
+Q. 9  Marathon Data Analysis - "MarathonRsulet.csv"
+
+Q. 10 TWiki Log Analysis - day wise  (plot the graphs) 
+
+
+ 
